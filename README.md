@@ -1,3 +1,6 @@
+나중에 A_BLOG2 로 이름변경  
+포폴이랑 연결 시킬 것임 MySelp였나랑  
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
