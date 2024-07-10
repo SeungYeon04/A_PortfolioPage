@@ -1,0 +1,16 @@
+.body {
+   min-height: 1200px; 
+}
+
+.bg-muted {
+    background-color: #f4f4f5 ;
+}
+
+.text-muted {
+    //background-color: #6e6e77 ;
+}
+
+.bg-footer {
+    background-color: #f4f4f5; 
+    color: #6e6e77; 
+} 

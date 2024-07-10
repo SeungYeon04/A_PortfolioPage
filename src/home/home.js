@@ -1,7 +1,15 @@
 import React from "react"; 
 import person from "../image/임시.jpg"
+import Career from "./career";
 
 export default function Home(){
+
+    const careerList = [
+        {title : "제목1", subtitle: "부제목1", date:"21.02 ~ 21.02", comment:"ㅇ"},
+        {title : "개발자2", subtitle: "부제목2", date:"22.02 ~ 21.02", comment:"ㅇ"},
+        {title : "제목3", subtitle: "부제목3", date:"23.02 ~ 21.02", comment:"ㅇ"}
+    ]
+
     return (
         <div className="w-full max-w-3-xl mx-auto py-12 px4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center space-y-6">
@@ -21,6 +29,18 @@ export default function Home(){
                     </p>
                 </div>
             </div>
-        </div>
+            <div>
+            <h2 className="text-2x1 font-bold mb-4">경력</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6"> 
+                {careerList.map((option)=>(
+                    <Career title={option.title}
+                            subtitle={option.subtitle}
+                            date={option.date}
+                            comment={option.comment}
+                    />
+                ))}
+            </div>
+        </div>  
+</div>
     );
 } 
