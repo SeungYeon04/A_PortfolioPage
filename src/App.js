@@ -5,6 +5,7 @@ import Home from "./home/home"
 import Post from './post/post';
 import Header from './layout/header';
 import Footer from './home/footer';
+import Read from './post/read';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element ={<Home/>} />
             <Route path="/blog" element ={<Post/>} />
-        
+            <Route path="/blog/:fileName" element ={<Read/>} />
           </Routes>
         </main>
       </div>
