@@ -1,6 +1,3 @@
-나중에 A_BLOG2 로 이름변경  
-이름 이력서 1으로 바꿀 예정  
-
 ## 🔗 페이지 URL 
 vercel URL: https://mini-blog-swart-nine.vercel.app/
 
@@ -12,9 +9,9 @@ MySelp였나 그거랑.
 
 ## ⚙️ 개발환경  
 
-• 언어: HTML CSS JavaScript 그 외  
+• 언어: React   
 • IDE: Visual Studio Code  
-• VCS: Github desktop   
+• VCS: Git + Github Desktop
 
 ## 🕹 주요기능  
 
