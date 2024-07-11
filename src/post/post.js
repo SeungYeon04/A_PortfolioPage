@@ -5,8 +5,8 @@ export default function Post(){
 
     const markdownFiles = [
         {name:"글1", content:"내여ㅛㅇ"}, 
-        {name:"글2", content:"내여ㅛㅇ"} 
-    ]
+        {name:"글테스트", content:"내여ㅛㅇ"} 
+    ] //여기 자동으로 받아오게 하고 싶은데... 블로그라면 글 하나 갖고 계속 편집 에바임
 
 
     return ( <div className="flex-1 py-8 px-6">
