@@ -4,8 +4,11 @@
 
 .body {
   min-height: 100vh; 
-  font-family: 'Ownglyph_UNZ-Rg';
 } 
+
+* {
+  font-family: 'HakgyoansimGeurimilgiTTF-R';
+}
 
 .title {
   font-weight: 700; 
@@ -22,10 +25,9 @@
   background-color: #16803b; 
   
 }
-
 @font-face {
-  font-family: 'Ownglyph_UNZ-Rg';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_UNZ-Rg.woff2') format('woff2');
+  font-family: 'HakgyoansimGeurimilgiTTF-R';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimGeurimilgiTTF-R.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
