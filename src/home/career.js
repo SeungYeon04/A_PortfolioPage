@@ -1,26 +1,35 @@
 import React from "react";
 
-export default function Career({ title, subtitle, date, stackList = [], selectedStack = [] }) {
+export default function Career({ title, subtitle, date, comment, stackList, selectedStack, img }) {
   return (
-    <div className="p-4 border rounded-xl shadow-sm space-y-2">
-      <h3 className="text-xl font-bold">{title}</h3>
-      <p className="text-stone-500">{subtitle}</p>
-      <p className="text-sm text-stone-400">{date}</p>
+    <div className="flex flex-col sm:flex-row gap-6 border rounded-xl p-6 shadow-md bg-white/10">
+      
+      {/* 왼쪽 */}
+      <div className="flex flex-col items-start sm:w-1/2 space-y-4">
+        <h3 className="text-2xl font-bold">{title}</h3>
+        <img 
+            src={img} 
+            alt={title} 
+            className="w-40 aspect-video object-cover rounded-md mb-2"
+        />
 
-      {/* 기술 스택 뱃지들 */}
-      <div className="flex flex-wrap gap-2 mt-2">
-        {stackList.map((tech, index) => (
-          <span
-            key={index}
-            className={`px-2 py-1 rounded-full text-sm border transition-all
-              ${selectedStack.includes(tech)
-                ? "bg-red-200 text-red-800 border-red-400"
-                : "bg-gray-100 text-gray-600 border-gray-300"}
-            `}
-          >
-            {tech}
-          </span>
-        ))}
+        <div className="flex flex-wrap gap-2 mt-2">
+          {stackList.map((stack, idx) => (
+            <span
+              key={idx}
+              className={`px-3 py-1 text-sm rounded-full 
+                ${selectedStack.includes(stack) ? "bg-red-500 text-white" : "bg-gray-600 text-white"}`}
+            >
+              {stack}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* 오른쪽 */}
+      <div className="flex flex-col justify-start sm:w-1/2 space-y-2 text-left">
+        <p className="text-sm text-gray-400">{subtitle} | {date}</p>
+        <p className="text-sm text-gray-300 whitespace-pre-line">{comment}</p>
       </div>
     </div>
   );
