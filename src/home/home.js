@@ -91,7 +91,8 @@ export default function Home() {
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       {/* 왼쪽 필터 영역 */}
-      <div className="lg:w-1/4 w-full mb-8 lg:mb-0">
+      <div className="lg:w-1/4 w-full mb-8 lg:mb-0 lg:-ml-6">
+
         <div className="flex flex-col items-center space-y-4">
           <img
             src={person}
@@ -110,7 +111,7 @@ export default function Home() {
       </div>
 
       {/* 오른쪽 프로젝트 리스트 */}
-      <div className="lg:w-3/4 w-full">
+      <div className="lg:w-3/4 w-full lg:ml-6">
         <h2 className="text-2xl font-bold mb-4">프로젝트</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {filteredCareers.map((project, idx) => (
