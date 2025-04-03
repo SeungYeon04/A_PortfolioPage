@@ -43,7 +43,7 @@ export default function Home() {
       subtitle: "개인 프로젝트",
       date: "21.02 ~ 21.02",
       comment: "몬스터를 터치하여 잡는 간단한 모바일 RPG",
-      img: "/Image/임시.jpg",
+      img: "/Image/temp.jpg",
       Stack: ["Unity", "C#"],
     },
     {
@@ -51,7 +51,7 @@ export default function Home() {
       subtitle: "개인 프로젝트",
       date: "22.02 ~ 22.12",
       comment: "웹 포트폴리오 제작 프로젝트",
-      img: "/Image/임시.jpg",
+      img: "/Image/temp.jpg",
       Stack: ["React", "Node.js"],
     },
     {
@@ -59,7 +59,7 @@ export default function Home() {
       subtitle: "팀 프로젝트",
       date: "23.01 ~ 23.06",
       comment: "장고를 이용한 백엔드 시스템 구축",
-      img: "/Image/임시.jpg",
+      img: "/Image/temp.jpg",
       Stack: ["Python", "Django"],
     },
   ];
