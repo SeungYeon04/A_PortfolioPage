@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import person from "../image/임시.jpg";
 import Career from "./career";
+import Star01 from "../stars/star01"; 
+import Star02 from "../stars/star02";
 
 const Stacks = ["All", "Unity", "C#", "Js", "React", "Kotlin", "Java", "JSP"];
 
@@ -67,9 +69,10 @@ export default function Home() {
       title: "간단한 게임 공식사이트",
       subtitle: "개인프로젝트",
       date: "24.XX ~ 24.XX",
-      comment: "나중에 게임개발 끝나면, 사람들이 게임을 쉽게 찾을 수 있도록 열어둘 게임 공식 사이트. 처음엔 대학교 리눅스 수업으로 버츄얼박스 우분투 써서 호스팅하여 쓰던 웹이다. 나중에 쓸듯",
+      comment: "나중에 게임개발 끝나면 쓸까 하는 게임 공식 사이트 디자인. 처음엔 대학교 수업으로 우분투 + 호스팅 테스트로 쓰던 웹이다.",
       img: "/Image/linuxWeb.png",
       Stack: ["HTML", "CSS"],
+      url: "https://github.com/SeungYeon04/A_Linux.github.io"
     },
     {
       title: "토끼 일기 & 메모 사이트",
@@ -78,6 +81,7 @@ export default function Home() {
       comment: "파이어베이스를 이용해 로그인과 글작성 구현. 디자인 비율 등 보완이 필요한 상태이다.",
       img: "/Image/RabbitBlog.png",
       Stack: ["HTML", "CSS", "Js", "Firebace"],
+      url: "https://github.com/SeungYeon04/A_RabbitBLOG"
     },
   ];
 
@@ -89,7 +93,10 @@ export default function Home() {
         );
 
   return (
-    <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <>
+    <Star02/>
+    <Star01/>
+    <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-[2]">
       {/* 왼쪽 필터 영역 */}
       <div className="lg:w-1/4 w-full mb-8 lg:mb-0 lg:-ml-6">
 
@@ -100,19 +107,20 @@ export default function Home() {
             className="rounded-full w-24 h-24 ring-2 ring-primary"
           />
           <div className="text-center">
-            <h1 className="text-3xl font-bold">승연</h1>
-            <p className="text-stone-500">게임개발자와 웹개발자</p>
+            <h1 className="text-3xl font-bold  text-white">승연</h1>
+            <p className="text-stone-500  text-white">게임개발자와 웹개발자</p>
           </div>
           <p className="text-stone-400 text-sm text-center px-2">
             돈과 자유 그리고 내가 죽어도 남을 작품들.
           </p>
+          <br></br>
         </div>
         <StackFilter selStack={selStack} onChange={setSelStack} />
       </div>
 
       {/* 오른쪽 프로젝트 리스트 */}
-      <div className="lg:w-3/4 w-full lg:ml-6">
-        <h2 className="text-2xl font-bold mb-4">프로젝트</h2>
+      <div className="lg:w-3/4 w-full lg:ml-6 relative z-[2]">
+        <h2 className="text-2xl font-bold mb-4  text-white">프로젝트</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {filteredCareers.map((project, idx) => (
             <a
@@ -154,5 +162,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </>
   );
 }
