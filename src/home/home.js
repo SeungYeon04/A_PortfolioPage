@@ -100,7 +100,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center space-y-4">
           <img
-            src={process.env.PUBLIC_URL + "/Image/임시.jpg"}
+            src={process.env.PUBLIC_URL + "/Image/앵무.jpg"}
             alt="user Profile"
             className="rounded-full w-24 h-24 ring-2 ring-primary"
           />
