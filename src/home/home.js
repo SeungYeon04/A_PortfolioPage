@@ -102,7 +102,7 @@ export default function Home() {
           <img
             src={process.env.PUBLIC_URL + "/Image/앵무.jpg"}
             alt="user Profile"
-            className="rounded-full w-24 h-24 ring-2 ring-primary"
+            className="rounded-full w-24 h-24 ring-2 ring-white"
           />
           <div className="text-center">
             <h1 className="text-3xl font-bold  text-white">승연</h1>
