@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import person from "../image/임시.jpg";
-import Career from "./career";
 import Star01 from "../stars/star01"; 
 import Star02 from "../stars/star02";
 
@@ -102,13 +100,13 @@ export default function Home() {
 
         <div className="flex flex-col items-center space-y-4">
           <img
-            src={person}
+            src={process.env.PUBLIC_URL + "/Image/임시.jpg"}
             alt="user Profile"
             className="rounded-full w-24 h-24 ring-2 ring-primary"
           />
           <div className="text-center">
             <h1 className="text-3xl font-bold  text-white">승연</h1>
-            <p className="text-stone-500  text-white">게임개발자와 웹개발자</p>
+            <p className="text-stone-500 text-white">게임개발자와 웹개발자</p>
           </div>
           <p className="text-stone-400 text-sm text-center px-2">
             돈과 자유 그리고 내가 죽어도 남을 작품들.
