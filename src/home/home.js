@@ -60,7 +60,7 @@ export default function Home() {
       subtitle: "팀프로젝트 (프론트2/백1)",
       date: "25.XX ~ 25.XX",
       comment: "끝말잇기 아케이드로 웹게임을 개발중. 본인은 프론트엔드의 디자인, UI화면, 기능 등을 담당하였다.",
-      img: "/Image/",
+      img: "/Image/kkuaWeb.png",
       Stack: ["React", "Docker", "git", "Figma"],
     },
     {
