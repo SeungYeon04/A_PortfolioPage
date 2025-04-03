@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Career({ title, subtitle, date, comment, stackList, selectedStack, img }) {
+export default function Career({ title, subtitle, date, comment, stackList, selectedStack, img, url }) {
   return (
     <div className="flex flex-col sm:flex-row gap-6 border rounded-xl p-6 shadow-md bg-white/10">
       
