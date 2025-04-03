@@ -1,5 +1,7 @@
 import React from "react"; 
 import { Link } from "react-router-dom"; 
+import Star01 from "../stars/star01"; 
+import Star02 from "../stars/star02";
 
 export default function Post(){
 
@@ -9,7 +11,11 @@ export default function Post(){
     ] //여기 자동으로 받아오게 하고 싶은데... 블로그라면 글 하나 갖고 계속 편집 에바임
 
 
-    return ( <div className="flex-1 py-8 px-6">
+    return ( 
+    <>
+        <Star02/>
+        <Star01/>
+    <div className="flex-1 py-8 px-6">
         <div className="container mx-auto grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-3"> 
                 <h2 className="text-2x1 font-bold mb-4 text-white">글</h2>
@@ -31,5 +37,6 @@ export default function Post(){
             </div>
         </div>
     </div> 
+    </>
     ); 
 } 
