@@ -4,15 +4,15 @@ import { Route, Routes } from 'react-router-dom';
 import Home from "./home/home"
 import Post from './post/post';
 import Header from './layout/header';
-import Footer from './home/footer';
 import Read from './post/read';
+import Star from "./stars/star01";
 
 function App() {
   return (
     <div>
-      <Header/>
       <div>
-        <main className="body">
+       <main className="body">
+       <Header/>
           <Routes>
             <Route path="/" element ={<Home/>} />
             <Route path="/blog" element ={<Post/>} />
@@ -20,7 +20,6 @@ function App() {
           </Routes>
         </main>
       </div>
-      <Footer/>
     </div>
   );
 }

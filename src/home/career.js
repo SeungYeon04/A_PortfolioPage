@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Career({ title, subtitle, date, comment, stackList, selectedStack, img, url }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 border rounded-xl p-6 shadow-md bg-white/10">
-      
+<div className="flex flex-col sm:flex-row gap-6 p-6">
+
       {/* 왼쪽 */}
       <div className="flex flex-col items-start sm:w-1/2 space-y-4">
         <h3 className="text-2xl font-bold">{title}</h3>
