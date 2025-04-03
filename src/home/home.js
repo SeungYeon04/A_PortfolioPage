@@ -25,7 +25,7 @@ function StackFilter({ selStack, onChange }) {
           onClick={() => toggleStack(tech)}
           className={`px-3 py-1 rounded-full border ${
             selStack.includes(tech) || (tech === "All" && selStack.length === 0)
-              ? "bg-red-500 text-white"
+              ? "bg-[#47338C] text-white"
               : "bg-white text-gray-800 border-gray-300"
           }`}
         >
