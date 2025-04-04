@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Star01 from "../stars/star01"; 
 import Star02 from "../stars/star02";
-import careerList  from "../data/careerList";
+import careerList from "../data/careerList";
 
 const Stacks = ["All", "Unity", "C#", "Js", "React", "Kotlin", "Java", "JSP"];
 
@@ -38,7 +38,6 @@ function StackFilter({ selStack, onChange }) {
 export default function Home() {
   const [selStack, setSelStack] = useState([]);
 
-  //const careerList 를 모듈화해서 import해서 careerList 이름 그대로 전달 
   const filteredCareers =
     selStack.length === 0 || selStack.includes("All")
       ? careerList
