@@ -54,9 +54,9 @@ const careerList = [
     },
     {
       title: "수박게임 모작제작",
-      subtitle: "팀프로젝트",
+      subtitle: "팀프로젝트 (5명)",
       date: "2023. ~ 2024.",
-      comment: "스파르타 코딩클럽에서 작업한 수박모작게임. 전체 그림&UI와 시작페이지와 충돌과 간단 로직을 작업",
+      comment: "스파르타 코딩클럽 주단위 작업물 중 하나인 수박모작게임. 전체 그림&UI, 시작페이지, 간단 로직을 작업",
       img: "/Image/wMGame.png",
       Stack: ["Unity", "C#"],
       url: "https://github.com/SeungYeon04/C_MergeGame"
