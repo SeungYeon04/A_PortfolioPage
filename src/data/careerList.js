@@ -59,7 +59,7 @@ const careerList = [
       comment: "스파르타 코딩클럽에서 작업한 수박모작게임. 전체 그림&UI와 시작페이지와 충돌과 간단 로직을 작업",
       img: "/Image/wMGame.png",
       Stack: ["Unity", "C#"],
-      url: ""
+      url: "https://github.com/SeungYeon04/C_MergeGame"
     }, 
     {
       title: "토깽이 MBTI 테스트",
