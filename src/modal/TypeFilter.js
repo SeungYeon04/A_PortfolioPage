@@ -13,7 +13,6 @@ export default function TypeFilter({ selType, onChange }) {
         }
     };
 
-
   return (
     <div className="flex flex-wrap gap-2 mb-6 mt-4 text-[15px]">
       {Types.map((type) => (
