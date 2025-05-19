@@ -96,6 +96,22 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
+
+                {/* Type도 표시해줌 */}
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {(Array.isArray(project.Type) ? project.Type : [project.Type]).map((type) => (
+                    <span
+                      key={type}
+                      className={`px-2 py-1 text-xs rounded-full border ${
+                        selType.includes(type)
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-200 text-gray-700"
+                      }`}
+                    >
+                      {type}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </a>

@@ -14,7 +14,7 @@ export default function StackFilter({ selStack, onChange }) {
   };
 
   return (
-    <div className="flex flex-wrap gap-2 mb-6 sticky top-4 text-[15px]">
+    <div className="flex flex-wrap gap-2 mb-6 top-4 text-[15px]">
       {Stacks.map((tech) => (
         <button
           key={tech}
