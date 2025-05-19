@@ -2,48 +2,27 @@ import React, { useState } from "react";
 import Star01 from "../stars/star01"; 
 import Star02 from "../stars/star02";
 import careerList from "../data/careerList";
+import "../index.css";
+import StackFilter from "../modal/StackFilter.js";
+import TypeFilter from "../modal/TypeFilter.js";
 
-const Stacks = ["All", "Unity", "C#", "Js", "React", "Kotlin", "Java", "JSP"];
-
-function StackFilter({ selStack, onChange }) {
-  const toggleStack = (tech) => {
-    if (tech === "All") {
-      onChange([]); // All 클릭 시 전체 선택 해제
-    } else if (selStack.includes(tech)) {
-      onChange(selStack.filter((stack) => stack !== tech));
-    } else {
-      onChange([...selStack, tech]);
-    }
-  };
-
-  return (
-    <div className="flex flex-wrap gap-2 mb-6 sticky top-4">
-      {Stacks.map((tech) => (
-        <button
-          key={tech}
-          onClick={() => toggleStack(tech)}
-          className={`px-3 py-1 rounded-full border ${
-            selStack.includes(tech) || (tech === "All" && selStack.length === 0)
-              ? "bg-[#47338C] text-white"
-              : "bg-white text-gray-800 border-gray-300"
-          }`}
-        >
-          {tech}
-        </button>
-      ))}
-    </div>
-  );
-}
 
 export default function Home() {
   const [selStack, setSelStack] = useState([]);
+  const [selType, setSelType] = useState([]);
 
-  const filteredCareers =
-    selStack.length === 0 || selStack.includes("All")
-      ? careerList
-      : careerList.filter((item) =>
-          item.Stack.some((stack) => selStack.includes(stack))
-        );
+  const filteredCareers = careerList.filter((item) => {
+    const stackMatch =
+      selStack.length === 0 || item.Stack.some((stack) => selStack.includes(stack));
+    
+    const typeMatch =
+      selType.length === 0 ||
+      (Array.isArray(item.Type)
+        ? item.Type.some((type) => selType.includes(type)) // Type이 배열일 때
+        : selType.includes(item.Type)); // Type이 문자열일 때
+
+    return stackMatch && typeMatch;
+  });
 
   return (
     <>
@@ -52,7 +31,6 @@ export default function Home() {
     <div className="flex flex-col lg:flex-row w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 relative z-[2]">
       {/* 왼쪽 필터 영역 */}
       <div className="lg:w-1/4 w-full mb-8 lg:mb-0 lg:-ml-6">
-
         <div className="flex flex-col items-center space-y-4">
           <img
             src={process.env.PUBLIC_URL + "/Image/앵무.jpg"}
@@ -64,11 +42,21 @@ export default function Home() {
             <p className="text-stone-500 text-white">게임개발자와 웹개발자</p>
           </div>
           <p className="text-stone-400 text-sm text-center px-2">
-            돈과 자유 그리고 내가 죽어도 남을 작품들.
+            돈과 자유 그리고 내가 죽어도 남을 작품들.<br></br>
+             { /*
+                그리고 배포한 거 공식사이트에도 좀 올리기!<br></br>
+                ******<br></br>
+                유니티 미니프로젝트는 많은데 찍기 어렵습니다..<br></br>
+                보완하고 올리려면 꽤 걸릴 듯합니다.
+             */}
           </p>
           <br></br>
         </div>
+      <div className="sticky top-5"> 
         <StackFilter selStack={selStack} onChange={setSelStack} />
+        <TypeFilter selType={selType} onChange={setSelType} />
+      </div>
+
       </div>
 
       {/* 오른쪽 프로젝트 리스트 */}
