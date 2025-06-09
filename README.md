@@ -9,7 +9,9 @@ MySelp였나 그거랑.
 
 ## ⚙️ 개발환경  
 
-• 언어: React   
+• 언어: React  
+가벼운 프레임워크들  
+Vue.js 등으로 변경할까 고민 중  
 • IDE: Visual Studio Code  
 • VCS: Git + Github Desktop
 
