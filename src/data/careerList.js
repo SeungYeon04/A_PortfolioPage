@@ -9,7 +9,7 @@ const careerList = [
       date: "2024. ~ 2024. (사용중)",
       comment: "대학을 다니며 만든 공부 정리 사이트. 해시함수를 사용하여 markdown file을 렌더링하며 github.io 전용 블로그입니다.",
       img: "/Image/studyBlog.png",
-      Stack: ["React"],
+      Stack: ["React", "UIUX"],
       Type: "Web",
       url: "https://github.com/SeungYeon04/A_Study"
     },

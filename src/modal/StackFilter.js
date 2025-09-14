@@ -1,6 +1,7 @@
 import React from "react";
 
-const Stacks = ["All", "Unity", "C#", "Js", "React", "Java"]; // 확장 가능
+const Stack1 = ["All", "Unity", "Unreal", "Godot", "Js", "React", "Java"];
+const Stack2 = ["All", "MediBang", "UIUX", "Bleander"]; 
 
 export default function StackFilter({ selStack, onChange }) {
   const toggleStack = (tech) => {
@@ -14,8 +15,9 @@ export default function StackFilter({ selStack, onChange }) {
   };
 
   return (
-    <div className="flex flex-wrap gap-2 mb-6 top-4 text-[15px]">
-      {Stacks.map((tech) => (
+  <div className="space-y-4 mb-6 text-[15px]">
+    <div className="flex flex-wrap gap-2">
+      {Stack1.map((tech) => (
         <button
           key={tech}
           onClick={() => toggleStack(tech)}
@@ -29,5 +31,22 @@ export default function StackFilter({ selStack, onChange }) {
         </button>
       ))}
     </div>
-  );
+
+    <div className="flex flex-wrap gap-2">
+      {Stack2.map((tech) => (
+        <button
+          key={tech}
+          onClick={() => toggleStack(tech)}
+          className={`px-2 py-0.5 rounded-full border ${
+            selStack.includes(tech) || (tech === "All" && selStack.length === 0)
+              ? "bg-[#155e75] text-white"
+              : "bg-white text-gray-800 border-gray-300"
+          }`}
+        >
+          {tech}
+        </button>
+      ))}
+    </div>
+  </div>
+);
 }
