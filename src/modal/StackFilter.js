@@ -1,6 +1,6 @@
 import React from "react";
 
-const Stacks = ["All", "Unity", "C#", "Js", "React", "Java", "JSP"]; // 확장 가능
+const Stacks = ["All", "Unity", "C#", "Js", "React", "Java"]; // 확장 가능
 
 export default function StackFilter({ selStack, onChange }) {
   const toggleStack = (tech) => {
