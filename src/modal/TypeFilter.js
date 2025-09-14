@@ -14,20 +14,23 @@ export default function TypeFilter({ selType, onChange }) {
     };
 
   return (
-    <div className="flex flex-wrap gap-2 mb-6 mt-4 text-[15px]">
-      {Types.map((type) => (
-        <button
-          key={type}
-          onClick={() => toggleType(type)}
-          className={`px-2 py-0.5 rounded-full border ${
-            selType.includes(type) || (type === "All" && selType.length === 0)
-              ? "bg-[#155e75] text-white"
-              : "bg-white text-gray-800 border-gray-300"
-          }`}
-        >
-          {type}
-        </button>
-      ))}
+    <div>
+      <h2 className="text-center text-white">프로젝트 카테고리</h2>
+      <div className="flex flex-wrap mb-6 mt-4 text-[15px] justify-center gap-2">
+        {Types.map((type) => (
+          <button
+            key={type}
+            onClick={() => toggleType(type)}
+            className={`px-2 py-0.5 rounded-full border ${
+              selType.includes(type) || (type === "All" && selType.length === 0)
+                ? "bg-[#155e75] text-white"
+                : "bg-white text-gray-800 border-gray-300"
+            }`}
+          >
+            {type}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

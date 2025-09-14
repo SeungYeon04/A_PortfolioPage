@@ -39,10 +39,10 @@ export default function Home() {
           />
           <div className="text-center">
             <h1 className="text-3xl font-bold  text-white">승연</h1>
-            <p className="text-stone-500 text-white">게임개발자와 웹개발자</p>
+            <p className=" text-white">Main: 게임개발<br/>Sub: 앱, 3D모델링, 디자인, 웹, 마케팅</p>
           </div>
           <p className="text-stone-400 text-sm text-center px-2">
-            돈과 자유 그리고 내가 죽어도 남을 작품들.<br></br>
+            1인 개발자 승연입니다.<br></br>
              { /*
                 그리고 배포한 거 공식사이트에도 좀 올리기!<br></br>
                 ******<br></br>
@@ -53,8 +53,8 @@ export default function Home() {
           <br></br>
         </div>
       <div className="sticky top-5"> 
-        <StackFilter selStack={selStack} onChange={setSelStack} />
         <TypeFilter selType={selType} onChange={setSelType} />
+        <StackFilter selStack={selStack} onChange={setSelStack} />
       </div>
 
       </div>

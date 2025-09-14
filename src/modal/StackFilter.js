@@ -16,7 +16,8 @@ export default function StackFilter({ selStack, onChange }) {
 
   return (
   <div className="space-y-4 mb-6 text-[15px]">
-    <div className="flex flex-wrap gap-2">
+    <h2 className="text-center text-white">개발 프로젝트</h2>
+    <div className="flex flex-wrap justify-center gap-2">
       {Stack1.map((tech) => (
         <button
           key={tech}
@@ -32,7 +33,8 @@ export default function StackFilter({ selStack, onChange }) {
       ))}
     </div>
 
-    <div className="flex flex-wrap gap-2">
+    <h2 className="text-center text-white">디자인 프로젝트</h2>
+    <div className="flex flex-wrap justify-center gap-2">
       {Stack2.map((tech) => (
         <button
           key={tech}
